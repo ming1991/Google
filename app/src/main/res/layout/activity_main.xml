@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ming.com.googleplay01.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_menu_left"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:background="#02ff38"
+        android:layout_gravity="left"
+        >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/fl_home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!--自定义命名空间,修改指示器下面粗线的颜色,默认字体的颜色和被选中时候的颜色-->
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:pstsIndicatorColor="@color/tab_indicator_selected"
+            app:pstsTabTextSize="16sp"
+            app:pstsTabTextColor="@color/tab_text_normal"
+            app:pstsSelectedTabTextSize="18sp"
+            app:pstsSelectedTabTextColor="@color/tab_text_selected"
+            ></com.astuetz.PagerSlidingTabStrip>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fl_menu_right"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:background="#d402ff"
+        android:layout_gravity="right"
+        >
+    </FrameLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
